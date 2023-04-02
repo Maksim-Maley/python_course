@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<h1>projects</h1>
+<h1>Projects</h1>
+<div class="row">
+    {% for Project in Projects %}
+    <div class="col-md-4">
+        <div class="col-md-4">
+            <img class="card-img-top" src="{% static project.image %}">
+            <div class="card-body">
+              <h5 class="card-title">{{ project.titel }}</h5>
+              <p class="card-text">{{ project.description }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
